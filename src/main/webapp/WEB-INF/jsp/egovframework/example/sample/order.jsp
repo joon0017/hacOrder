@@ -17,7 +17,7 @@
         <img class="responsive" src="<c:url value='/images/kiminoChukjeaHa.png'/>" alt="핵 축제">
     </header>
     <div class="menu">
-        <form action="confirmOrder.do" method="POST">
+        <form action="/sample/confirmOrder.do" method="POST">
          	<!-- User Name Input -->
             <div class="form-item">
                 <label for="userName">주문자 성함:</label>
