@@ -63,4 +63,9 @@ public class EgovSampleController {
 		return "/sample/order";
 	}
 	
+	@RequestMapping(value="/sample/confirmOrder.do")
+	public String confirmOrder() {
+		return "/sample/confirmOrder";
+	}
+	
 }
