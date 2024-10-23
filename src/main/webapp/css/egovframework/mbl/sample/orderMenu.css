@@ -1,45 +1,106 @@
-body {font-family: Arial, sans-serif;margin: 0;padding: 0;background-color: #f4f4f4;}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
 header {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-        }
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
 img {
-            max-width: 100%;
-            height: auto;
-        }
+    max-width: 100%;
+    height: auto;
+}
+
 .menu {
-            max-width: 600px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .menu-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically centered */
+    margin-bottom: 15px;
+}
+
+.menu-item span {
+    flex: 1;
+}
+
+.menu-item span.price {
+    font-weight: bold;
+    text-align: right;
+    width: 50px; /* Fixed width for price to align */
+    margin-right:50px;
+}
+
+input[type="number"] {
+    width: 60px; /* Fixed width for input field */
+    text-align: center; /* Center the input text */
+}
+
 button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 16px;
-            background: #5cb85c;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 button:hover {
-            background: #4cae4c;
-        }
-        
-img.responsive {
-    max-width: 100%;  /* Ensures the image doesn't exceed the container width */
-    height: auto;     /* Maintains the aspect ratio */
-    display: block;   /* Centers the image in its container */
-    margin: 0 auto;  /* Centers the image */
+    background: #4cae4c;
+}
+
+.form-item {
+    margin-bottom: 15px;
+}
+
+.form-item label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+.form-item input {
+    width: 100%; /* Full width for inputs */
+    padding: 8px; /* Padding for comfort */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 300px) {
+    .menu {
+        width: 90%; /* Use a percentage width on smaller screens */
+    }
+
+    .menu-item {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .menu-item span.price {
+        width: auto; /* Remove fixed width */
+        text-align: left; /* Left-align price */
+        margin-top: 5px; /* Add some spacing */
+    }
+
+    input[type="number"] {
+        width: 100%; /* Full width on smaller screens */
+    }
 }
